@@ -4,6 +4,8 @@ var drawCellSize = 3;
 var genGridSize = 3;
 var genCellSize = 3;
 
+var gapCheck = false;
+
 function InitializeGrids()
 {
     CreateGrid("draw-grid", drawGridSize, drawCellSize, true);
@@ -58,4 +60,35 @@ function DrawChangeSpin()
 function GenChangeSpin()
 {
     ChangeSpin("gen", drawGridSize, drawCellSize, false);
+}
+
+function SwitchGridGap(button)
+{
+    if (gapCheck == true) gapCheck = false;
+    else gapCheck = true;
+
+    if (gapCheck)
+    {
+        let grids = document.getElementsByClassName("main-grid");
+
+        console.log(grids.length);
+
+        for (var i = 0; i < grids.length; i++)
+        {
+            grids[i].classList.add("main-grid-without-grid-gap");
+        }
+
+        button.innerHTML = "Enable gap";
+    }
+    else
+    {
+        let grids = document.getElementsByClassName("main-grid");
+
+        for (var i = 0; i < grids.length; i++)
+        {
+            grids[i].classList.remove("main-grid-without-grid-gap");
+        }
+
+        button.innerHTML = "Disable gap";
+    }
 }
