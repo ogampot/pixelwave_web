@@ -1,0 +1,158 @@
+.main {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.grid-with-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-grid {
+    --scale: 300px;
+    width: var(--scale);
+    height: var(--scale);
+    grid-gap: 1px;
+    background-color: #000000;
+    border: transparent 1px solid;
+    outline: black 2px solid;
+}
+
+.grid-cell {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset #00000010 0px 0px 0px 1px;
+}
+
+.element-cell {
+    background-color: whitesmoke;
+}
+
+.element-cell:hover {
+    box-shadow: inset black 0px 0px 0px 1px;
+}
+
+.mid-block {
+    width: 150px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.color-picker-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+.color-picker-button {
+    width: 100px;
+    height: 100px;
+    border: black 2px solid;
+    transition: 0.05s;
+    -webkit-transition: 0.05s;
+}
+
+.color-picker-button:hover {
+    border: black 4px solid;
+}
+
+.color-value {
+    width: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    text-transform: lowercase;
+}
+
+input[type=text] {
+    padding: 5px 5px;
+    border: #cccccc 2px solid;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type=text]:focus {
+    border: black 2px solid;
+}
+
+.generate-button {
+    width: 100px;
+    height: 50px;
+    margin: 10px 0px 10px 0px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 30px;
+    font-variant-caps: all-petite-caps;
+    border: black 2px solid;
+    border-radius: 0;
+    background-color: #f5f5f5;
+    transition: 0.05s;
+    -webkit-transition: 0.05s;
+}
+
+.generate-button:hover {
+    font-size: 35px;
+    border: black 4px solid;
+    background-color: #fdffba;
+}
+
+.grid-settings {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px 10px 0px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.grid-settings-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-settings-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.grid-settings-element + .grid-settings-element {
+    margin-left: 10px;
+}
+
+.grid-settings label {
+    margin: 2px 0px 2px 0px;
+}
+
+.grid-settings input {
+    margin: 2px 0px 2px 0px;
+}
+
+input[type=number] {
+    padding: 0px 0px;
+    border: #cccccc 2px solid;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type=number]:focus {
+    border: black 2px solid;
+}

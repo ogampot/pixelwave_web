@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jscolor-2.5.1/jscolor.js"></script>
+    <script src="js/grids.js"></script>
+    <script src="js/colorPicker.js"></script>
+    <title>PixelWave</title>
+</head>
+<body>
+    <div class="main">
+        <div class="grid-with-settings">
+
+            <div class="grid main-grid draw-grid"></div>
+
+            <div class="grid-settings">
+                <div class="grid-settings-div draw-grid-settings">
+                    <div class="grid-settings-element grid-settings-labels">
+                        <label>Grid size: </label>
+                        <label>Cell size: </label>
+                    </div>
+                    <div class="grid-settings-element grid-settings-inputs">
+                        <input type="number" value="3" name="draw-grid-spin" class="size-spin" id="draw-grid-spin"
+                            onchange="DrawChangeSpin()" min="1" max="10">
+            
+                        <input type="number" value="3" name="draw-cell-spin" class="size-spin" id="draw-cell-spin"
+                            onchange="DrawChangeSpin()" min="1" max="10">
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <div class="mid-block">
+            <p class="color-picker-label">Color:</p>
+            <button class="color-picker-button" data-jscolor="{ valueElement:'#color-value' }"></button>
+            <input class="color-value" id="color-value" value="ec1c23" name="color-value" type="text">
+            <button class="generate-button">Gen</button>
+        </div>
+
+        <div class="grid-with-settings">
+
+            <div class="grid main-grid gen-grid"></div>
+
+            <div class="grid-settings">
+                <div class="grid-settings-div gen-grid-settings">
+                    <div class="grid-settings-element grid-settings-labels">
+                        <label>Grid size: </label>
+                        <label>Cell size: </label>
+                    </div>
+                    <div class="grid-settings-element grid-settings-inputs">
+                        <input type="number" value="3" name="gen-grid-spin" class="size-spin" id="gen-grid-spin"
+                            onchange="GenChangeSpin()" min="1" max="10">
+                        <input type="number" value="3" name="gen-cell-spin" class="size-spin" id="gen-cell-spin"
+                            onchange="GenChangeSpin()" min="1" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        InitializeGrids();
+        InitializeColorPicker();
+    </script>
+</body>
+</html>
