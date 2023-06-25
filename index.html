@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jscolor-2.5.1/jscolor.js"></script>
     <script src="js/grids.js"></script>
+    <script src="js/generate.js"></script>
     <script src="js/colorPicker.js"></script>
     <title>PixelWave</title>
 </head>
@@ -25,7 +26,6 @@
                     <div class="grid-settings-element grid-settings-inputs">
                         <input type="number" value="3" name="draw-grid-spin" class="size-spin" id="draw-grid-spin"
                             onchange="DrawChangeSpin()" min="1" max="10">
-            
                         <input type="number" value="3" name="draw-cell-spin" class="size-spin" id="draw-cell-spin"
                             onchange="DrawChangeSpin()" min="1" max="10">
                     </div>
@@ -37,8 +37,9 @@
             <p class="color-picker-label">Color:</p>
             <button class="color-picker-button" data-jscolor="{ valueElement:'#color-value' }"></button>
             <input class="color-value" id="color-value" value="ec1c23" name="color-value" type="text">
-            <button class="generate-button">Gen</button>
-            <button class="gap-switch-button" onclick="SwitchGridGap(this)">Disable gap</button>
+            <button class="mid-block-button primary-button generate-button" onclick="InitializeDrawCells()">Gen</button>
+            <button class="mid-block-button secondary-button gap-switch-button" onclick="SwitchGridGap(this)">Disable gap</button>
+            <button class="mid-block-button secondary-button clear-button" onclick="InitializeGrids()">Clear</button>
         </div>
 
         <div class="grid-with-settings">
